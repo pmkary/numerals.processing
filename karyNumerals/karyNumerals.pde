@@ -58,7 +58,7 @@ void setup() {
             
             // - zero  - - - - - - - - - - - - - - - -
             
-              startY -= 5;
+              startY -= 15;
          
               line( startX - 10 , startY , startX - 10 , 
                     startY + 10 );
@@ -132,13 +132,39 @@ void setup() {
   
   // ──────────────────────────────────────────────────
   
-      PFont didot = loadFont( "Avenir-Book-30.vlw" );
+      // • • • • •
+  
+      PFont spacium = loadFont( "SPACIUM-BETA-4-80.vlw" );
       
-      textFont( didot , 24 );
-
+      PFont nahouii = loadFont( "Nahouii-Bold-80.vlw" );
+      
       rotate ( PI / 2.0 );
       
-      text ( "Kary Numeral Of: " + number , 10 , -10 );      
+      // • • • • •
+      
+      textFont( nahouii , 20 );
+      
+      fill( 150 );
+      
+      text ( "wav'wing nemon mot " , 10 , -17 );
+      
+      // • • • • •
+    
+      textFont( spacium , 42 );  
+      
+      fill( 200 );
+      
+      text ( number , 268 ,  - 13 );    
+      
+      // • • • • •
+     
+      rotate ( - PI / 2.0 ); 
+  
+  // ──────────────────────────────────────────────────
+      
+      stroke( 100 );
+      
+      line( 46 , 0 , 46 , mainHeight );
 
   // ──────────────────────────────────────────────────
   
