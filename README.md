@@ -1,6 +1,6 @@
 # Kary Numerals - Processing Port
 
-![](2340024890249056.png)
+<img width="400" src="karyNumerals/2340024890249056.png">
 
 <br /><br />
 
