@@ -17,6 +17,8 @@ void setup() {
   
       // • • • • •
       
+      pixelDensity(2);
+      
       String number = "2340024890249056";
 
       // • • • • •
@@ -25,7 +27,7 @@ void setup() {
       
       int mainHeight = 500;
       
-      int lineSize = 60;
+      int lineSize = 50;
       
       int startY = 30;
       
@@ -33,7 +35,7 @@ void setup() {
       
       // • • • • •
   
-      size( mainWidth , mainHeight );
+      size( 400 , 500 );
       
       background( 0 , 0 , 0 );
       
@@ -50,11 +52,9 @@ void setup() {
     
           int digit = int( str( number.charAt( i ) ) );
           
-          print( " |" + digit );
-          
           // • • • • •
          
-          if ( number.charAt( i ) == '0' ) {
+          if ( digit == 0 ) {
             
             // - zero  - - - - - - - - - - - - - - - -
             
@@ -72,7 +72,7 @@ void setup() {
               startY += 25;
               
             // - - - - - - - - - - - - - - - - - - - -
-           
+
           } else {
             
             // - flags - - - - - - - - - - - - - - - -
@@ -80,8 +80,6 @@ void setup() {
               // • • • • •
             
               int flags = floor( digit / 3 );
-              
-              print( " >" + flags );
               
               int flagX = 0; 
               
@@ -95,7 +93,7 @@ void setup() {
               for ( int j = 0; j < flags; j++ ) {
                   
                   line( startX + flagX , startY ,
-                        startX + flagX , startY + 20 );
+                        startX + flagX , startY + 15 );
                   
                   flagX += 10;
                   
@@ -117,7 +115,7 @@ void setup() {
           
               if ( flags > 0 ) {
               
-                  startY += 20; 
+                  startY += 15; 
               
               }
               
